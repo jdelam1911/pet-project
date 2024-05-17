@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.11.1/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Pet Finder</title>
+</head>
+
+<body class="mx-2 my-2 bg-no-repeat bg-cover" style="height: 95vh; background-image: url('https://media.istockphoto.com/id/1417882544/photo/large-group-of-cats-and-dogs-looking-at-the-camera-on-blue-background.jpg?s=612x612&w=0&k=20&c=kGKANSIFdNfhBJMipyuaKU4BcVE1oELWev9lF2ickE0=');"> 
+    <header class="flex flex-row justify-center"> 
+      <h1 class="text-5xl">Pet Finder!</h1>
+
+    </header> 
+    <div class="flex flex-row justify-center mt-10">
+      <h3 class="text-3xl">Do you want scales or tails, paws or claws? We can help! </h3>
+    </div>
+      <!-- Open the modal using ID.showModal() method -->
+    <div class="flex justify-center mt-10">
+        <button class="btn btn-accent btn-wide" onclick="my_modal_1.showModal()">Find Pet</button>
+    </div>
+  <dialog id="my_modal_1" class="modal">
+    <form method="dialog" class="modal-box flex flex-col justify-center items-center" id="response-form">
+      <p class="py-4">Find your pet!</p>
+
+      <select class="select select-bordered w-full max-w-xs" name="species" id="species">
+        <option value="" disabled selected>Select a Breed...</option>
+        <option value="dog">Dog</option>
+        <option value="cat">Cat</option>
+      </select>
+
+      <select class="select select-bordered w-full max-w-xs mt-2" name="age" id="age">
+          <option value="" disabled selected>Select age of Pet...</option>
+          <option value="kitten">Kitten</option>
+          <option value="puppy">Puppy</option>
+          <option value="young">Young</option>
+          <option value="adult">Adult</option>
+          <option value="senior">Senior</option>  
+      </select>
+
+      <select class="select select-bordered w-full max-w-xs mt-2" name="gender" id="gender">
+          <option value="" disabled selected>Select Pet Gender</option>
+          <option value="m">Male</option>
+          <option value="f">Female</option>   
+      </select>  
+
+      <select class="select select-bordered w-full max-w-xs mt-2" name="distance" id="distance">
+        <option value="" disabled selected>Select Pet Distance</option>
+        <option value="10">10 miles</option>
+        <option value="25">25 miles</option>
+        <option value="50">50 miles</option>
+        <option value="75">75 miles</option>
+        <option value="100">100 miles</option>
+     </select>  
+
+      <input class="input input-bordered w-full max-w-xs mt-2" type="text" name="location" id="location" placeholder="Zip Code"/>
+        <div class="modal-action">
+        <button class="btn">Close</button>
+        <button class="btn btn-primary" type="submit" id="submit">Submit</button>       
+      </div>
+    </form>
+  </dialog>
+    
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
